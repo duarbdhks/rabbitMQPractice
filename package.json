@@ -1,0 +1,16 @@
+{
+  "name": "rabbitmqpractice",
+  "version": "1.0.0",
+  "description": "rabbitMQ 를 이용해 로그인 세션 등록",
+  "main": "index.js",
+  "scripts": {
+    "docker-up": "docker-compose -f docker-compose.yml -p rabbitmq_practice up -d",
+    "docker-rm": "docker-compose -f docker-compose.yml down",
+    "start": "concurrently \"nodemon login-service/index.js\" \"nodemon session-service/index.js\""
+  },
+  "author": "",
+  "devDependencies": {
+    "concurrently": "^6.5.1"
+  },
+  "license": "ISC"
+}
